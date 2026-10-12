@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Orden de trabajo</title>
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+            <link rel="stylesheet" href="{% static 'hello/css/styles.css' %}">
+        </head>
+
+        <body>
+            <h1>Consulta de ordenes de trabajo</h1>
+            <table class="table-user">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Cuenta</th>
+                        <th>Perfil</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tbody>
+                        {% for user in users %}
+                        <tr>
+                            <td>{{ user.name }}</td>
+                            <td>{{ user.account }}</td>
+                            <td>{{ user.profile }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </tbody>
+            </table>
+            <script src="{% static 'hello/js/scripts.js'%}"></script>
+        </body>
+    </html>
